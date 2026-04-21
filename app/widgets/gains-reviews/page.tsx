@@ -116,7 +116,7 @@ export default function GainsReviewsPage() {
             fontWeight: 600,
           }}
         >
-          Lo que dicen nuestras clientas
+          Lo que dicen nuestros clientes
         </h2>
 
         <p
