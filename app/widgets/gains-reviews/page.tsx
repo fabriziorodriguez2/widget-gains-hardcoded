@@ -85,7 +85,9 @@ export default function GainsReviewsPage() {
         padding: "40px 20px",
         fontFamily:
           'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-        background: "linear-gradient(180deg, #050505 0%, #0a0a0a 100%)",
+        background: "#000000",
+        minHeight: "601px",
+        boxSizing: "border-box",
       }}
     >
       <section
