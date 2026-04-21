@@ -14,9 +14,9 @@ const reviews = [
     text: "De Gains tengo una riñonera, un buzo y un gorro que los uso siempre. ¡La calidad es muy buena y la atención excelente!",
   },
   {
-    name: "Lucía",
+    name: "Eugenia Villar",
     rating: 5,
-    text: "Compré por recomendación y quedé re conforme. Seguro vuelvo a comprar.",
+    text: "La ropa es excelente, de muy buena calidad y súper cómoda. Además, la atención es impecable.",
   },
   {
     name: "Cindy Maqueira",
@@ -26,7 +26,7 @@ const reviews = [
   {
     name: "Paula Pizzano",
     rating: 5,
-    text: "Re linda ropa,  de buena calidad y supera expectativas, todo bien hace GAINS ❤️",
+    text: "Ropa de la buena",
   },
 ];
 
