@@ -83,7 +83,7 @@
             font-weight: 600;
             line-height: 1.2;
           ">
-            ${review.name} dejó una reseña de ${review.rating} estrellas
+            ${review.name} nos dejó ${review.rating} estrellas
           </div>
 
           <div style="
