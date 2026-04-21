@@ -64,13 +64,13 @@
           width: 38px;
           height: 38px;
           border-radius: 12px;
-          background: #FAAB4B;
+          background: #9188F5;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          color: #000441;
-          font-size: 20px;
+          color: #ffffff;
+          font-size: 18px;
           font-weight: 700;
           line-height: 1;
         ">
@@ -106,7 +106,7 @@
             <span>${review.ago}</span>
             <span>•</span>
             <img 
-              src="/isotipo.svg"
+              src="https://widget-gains-hardcoded-production.up.railway.app/isotipo.svg"
               style="width:12px;height:12px;"
             />
             <span>Powered by Flikker</span>
