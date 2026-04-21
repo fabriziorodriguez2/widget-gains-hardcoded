@@ -106,7 +106,7 @@
             <span>${review.ago}</span>
             <span>•</span>
             <img 
-              src="https://TU-DOMINIO.com/isotipo.svg"
+              src="/isotipo.svg"
               style="width:12px;height:12px;"
             />
             <span>Powered by Flikker</span>
