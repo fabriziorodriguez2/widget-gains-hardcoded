@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import isotipo from "@/isotipo.svg";
 type Review = {
   name: string;
   rating: number;
@@ -158,7 +157,7 @@ export default function FloatingReviewNotification() {
           }}
         >
           <img
-            src={isotipo.src}
+            src="/isotipo.svg"
             alt="Flikker"
             style={{ width: "20px", height: "20px" }}
           />

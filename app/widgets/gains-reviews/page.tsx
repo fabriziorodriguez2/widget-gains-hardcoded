@@ -257,13 +257,31 @@ export default function GainsReviewsPage() {
               border: "1px solid rgba(255,255,255,0.14)",
               background: "rgba(255,255,255,0.08)",
               color: "#ffffff",
-              fontSize: isMobile ? "14px" : "18px",
               cursor: "pointer",
               padding: 0,
               lineHeight: 1,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backdropFilter: "blur(8px)",
             }}
           >
-            ←
+            <svg
+              width={isMobile ? 16 : 18}
+              height={isMobile ? 16 : 18}
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M15 6L9 12L15 18"
+                stroke="currentColor"
+                strokeWidth="1.9"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
 
           <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
@@ -295,13 +313,31 @@ export default function GainsReviewsPage() {
               border: "1px solid rgba(255,255,255,0.14)",
               background: "rgba(255,255,255,0.08)",
               color: "#ffffff",
-              fontSize: isMobile ? "14px" : "18px",
               cursor: "pointer",
               padding: 0,
               lineHeight: 1,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backdropFilter: "blur(8px)",
             }}
           >
-            →
+            <svg
+              width={isMobile ? 16 : 18}
+              height={isMobile ? 16 : 18}
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9 6L15 12L9 18"
+                stroke="currentColor"
+                strokeWidth="1.9"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
         </div>
         <div
