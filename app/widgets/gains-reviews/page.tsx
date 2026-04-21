@@ -188,6 +188,11 @@ export default function GainsReviewsPage() {
                 fontWeight: 500,
                 maxWidth: "720px",
                 marginInline: "auto",
+                minHeight: "88px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
               }}
             >
               “{review.text}”
