@@ -1,5 +1,4 @@
 "use client";
-import isotipo from "@/isotipo.svg";
 import { useEffect, useState } from "react";
 
 const reviews = [
@@ -317,7 +316,7 @@ export default function GainsReviewsPage() {
           }}
         >
           <img
-            src={isotipo.src}
+            src="/isotipo.svg"
             alt="Flikker"
             style={{ width: "14px", height: "14px" }}
           />
