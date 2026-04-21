@@ -82,11 +82,11 @@ export default function GainsReviewsPage() {
     <main
       style={{
         margin: 0,
-        padding: "40px 20px",
+        padding: "24px 16px 20px",
         fontFamily:
           'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
         background: "#000000",
-        minHeight: "601px",
+        minHeight: "auto",
         boxSizing: "border-box",
       }}
     >
