@@ -1,5 +1,5 @@
 "use client";
-
+import isotipo from "@/isotipo.svg";
 import { useEffect, useState } from "react";
 
 const reviews = [
@@ -304,6 +304,24 @@ export default function GainsReviewsPage() {
           >
             →
           </button>
+        </div>
+        <div
+          style={{
+            marginTop: isMobile ? "10px" : "14px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8px",
+            color: "rgba(255,255,255,0.72)",
+            fontSize: isMobile ? "11px" : "12px",
+          }}
+        >
+          <img
+            src={isotipo.src}
+            alt="Flikker"
+            style={{ width: "14px", height: "14px" }}
+          />
+          <span>Powered by Flikker</span>
         </div>
       </section>
     </main>
