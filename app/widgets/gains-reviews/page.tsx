@@ -81,17 +81,22 @@ export default function GainsReviewsPage() {
   const review = reviews[index];
 
   return (
-    <main
-      style={{
-        margin: 0,
-        padding: isMobile ? "18px 14px 14px" : "32px 20px",
-        fontFamily:
-          'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-        background: "#000000",
-        boxSizing: "border-box",
-        overflow: "hidden",
-      }}
-    >
+      <main
+        style={{
+          margin: 0,
+          padding: isMobile ? "18px 14px" : "32px 20px",
+          fontFamily:
+            'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          background: "#000000",
+          boxSizing: "border-box",
+        
+          display: "flex",
+          alignItems: isMobile ? "center" : "flex-start",
+          justifyContent: "center",
+        
+          minHeight: isMobile ? "100vh" : "auto",
+        }}
+      >
       <section
         style={{
           maxWidth: "920px",
