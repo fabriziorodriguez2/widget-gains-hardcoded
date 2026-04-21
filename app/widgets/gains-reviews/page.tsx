@@ -6,12 +6,12 @@ const reviews = [
   {
     name: "Marcelo Gaggero",
     rating: 5,
-    text: "Sin darme cuenta termine con la mitad de la ropa del ropero de Gains, la calidad es increíble además de ser prendas re facheras!",
+    text: "Terminé comprando un montón en Gains. La calidad es increíble y las prendas son re facheras",
   },
   {
     name: "Leonardo Waserman",
     rating: 5,
-    text: "De Gains tengo una riñonera, un buzo y un gorro que los uso siempre. ¡La calidad es muy buena y la atención excelente!",
+    text: "Tengo varias cosas de Gains y las uso siempre. Muy buena calidad y excelente atención.",
   },
   {
     name: "Eugenia Villar",
@@ -31,13 +31,15 @@ const reviews = [
 ];
 
 function Stars({ rating }: { rating: number }) {
+  const isMobile = typeof window !== "undefined" ? window.innerWidth <= 768 : false;
+
   return (
     <div
       style={{
-        fontSize: "18px",
-        letterSpacing: "3px",
+        fontSize: isMobile ? "15px" : "18px",
+        letterSpacing: isMobile ? "2px" : "3px",
         color: "#D4AF37",
-        marginBottom: "18px",
+        marginBottom: isMobile ? "14px" : "18px",
       }}
     >
       {"★".repeat(rating)}
@@ -48,7 +50,7 @@ function Stars({ rating }: { rating: number }) {
 export default function GainsReviewsPage() {
   const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(true);
-
+  const isMobile = typeof window !== "undefined" ? window.innerWidth <= 768 : false;
   const changeReview = (updater: number | ((prev: number) => number)) => {
     setAnimate(false);
 
@@ -82,12 +84,12 @@ export default function GainsReviewsPage() {
     <main
       style={{
         margin: 0,
-        padding: "24px 16px 20px",
+        padding: isMobile ? "18px 14px 14px" : "32px 20px",
         fontFamily:
           'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
         background: "#000000",
-        minHeight: "auto",
         boxSizing: "border-box",
+        overflow: "hidden",
       }}
     >
       <section
@@ -99,11 +101,11 @@ export default function GainsReviewsPage() {
       >
         <p
           style={{
-            fontSize: "12px",
+            fontSize: isMobile ? "11px" : "12px",
             letterSpacing: "2px",
             textTransform: "uppercase",
             color: "rgba(255,255,255,0.55)",
-            marginBottom: "10px",
+            marginBottom: isMobile ? "8px" : "10px",
           }}
         >
           Testimonios
@@ -111,9 +113,9 @@ export default function GainsReviewsPage() {
 
         <h2
           style={{
-            fontSize: "clamp(28px, 4vw, 42px)",
-            lineHeight: 1.1,
-            marginBottom: "12px",
+            fontSize: isMobile ? "22px" : "clamp(28px, 4vw, 42px)",
+            lineHeight: 1.08,
+            marginBottom: isMobile ? "10px" : "12px",
             color: "#ffffff",
             fontWeight: 600,
           }}
@@ -124,8 +126,9 @@ export default function GainsReviewsPage() {
         <p
           style={{
             color: "rgba(255,255,255,0.7)",
-            marginBottom: "32px",
-            fontSize: "16px",
+            marginBottom: isMobile ? "18px" : "32px",
+            fontSize: isMobile ? "13px" : "16px",
+            lineHeight: 1.4,
           }}
         >
           Opiniones de quienes ya compraron en Gains
@@ -135,15 +138,16 @@ export default function GainsReviewsPage() {
           style={{
             position: "relative",
             background: "rgba(255,255,255,0.98)",
-            borderRadius: "28px",
-            padding: "42px 32px",
+            borderRadius: isMobile ? "24px" : "28px",
+            padding: isMobile ? "22px 18px" : "42px 32px",
             boxShadow: "0 20px 60px rgba(0,0,0,0.28)",
-            minHeight: "260px",
+            minHeight: isMobile ? "210px" : "260px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             border: "1px solid rgba(255,255,255,0.08)",
             overflow: "hidden",
+            boxSizing: "border-box",
           }}
         >
           <div
@@ -183,14 +187,14 @@ export default function GainsReviewsPage() {
 
             <p
               style={{
-                fontSize: "clamp(20px, 2.4vw, 30px)",
-                lineHeight: 1.45,
-                marginBottom: "22px",
+                fontSize: isMobile ? "15px" : "clamp(20px, 2.4vw, 30px)",
+                lineHeight: isMobile ? 1.45 : 1.45,
+                marginBottom: isMobile ? "14px" : "22px",
                 color: "#111111",
                 fontWeight: 500,
                 maxWidth: "720px",
                 marginInline: "auto",
-                minHeight: "88px",
+                minHeight: isMobile ? "64px" : "88px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -210,7 +214,7 @@ export default function GainsReviewsPage() {
             >
               <strong
                 style={{
-                  fontSize: "16px",
+                  fontSize: isMobile ? "13px" : "16px",
                   color: "#111111",
                   fontWeight: 700,
                 }}
@@ -220,7 +224,7 @@ export default function GainsReviewsPage() {
 
               <span
                 style={{
-                  fontSize: "13px",
+                  fontSize: isMobile ? "11px" : "13px",
                   color: "#666666",
                 }}
               >
@@ -232,14 +236,29 @@ export default function GainsReviewsPage() {
 
         <div
           style={{
-            marginTop: "22px",
+            marginTop: isMobile ? "12px" : "22px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            gap: "14px",
+            gap: isMobile ? "10px" : "14px",
           }}
         >
-          <button onClick={handlePrev} aria-label="Reseña anterior">
+          <button
+            onClick={handlePrev}
+            aria-label="Reseña anterior"
+            style={{
+              width: isMobile ? "36px" : "46px",
+              height: isMobile ? "36px" : "46px",
+              borderRadius: "999px",
+              border: "1px solid rgba(255,255,255,0.14)",
+              background: "rgba(255,255,255,0.08)",
+              color: "#ffffff",
+              fontSize: isMobile ? "14px" : "18px",
+              cursor: "pointer",
+              padding: 0,
+              lineHeight: 1,
+            }}
+          >
             ←
           </button>
 
@@ -249,11 +268,35 @@ export default function GainsReviewsPage() {
                 key={i}
                 onClick={() => changeReview(i)}
                 aria-label={`Ir a reseña ${i + 1}`}
+                style={{
+                  width: i === index ? (isMobile ? "18px" : "26px") : "8px",
+                  height: "8px",
+                  borderRadius: "999px",
+                  border: "none",
+                  background: i === index ? "#ffffff" : "rgba(255,255,255,0.35)",
+                  cursor: "pointer",
+                  transition: "all 220ms ease",
+                }}
               />
             ))}
           </div>
 
-          <button onClick={handleNext} aria-label="Siguiente reseña">
+          <button
+            onClick={handleNext}
+            aria-label="Siguiente reseña"
+            style={{
+              width: isMobile ? "36px" : "46px",
+              height: isMobile ? "36px" : "46px",
+              borderRadius: "999px",
+              border: "1px solid rgba(255,255,255,0.14)",
+              background: "rgba(255,255,255,0.08)",
+              color: "#ffffff",
+              fontSize: isMobile ? "14px" : "18px",
+              cursor: "pointer",
+              padding: 0,
+              lineHeight: 1,
+            }}
+          >
             →
           </button>
         </div>
